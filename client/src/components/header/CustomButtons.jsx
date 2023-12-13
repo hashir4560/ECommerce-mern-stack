@@ -42,4 +42,4 @@ const CustomButtons=()=>{
     )
 
 }
-export default CustomButtons
+export default CustomButtons;
