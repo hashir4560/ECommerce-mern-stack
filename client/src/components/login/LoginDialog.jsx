@@ -1,6 +1,8 @@
 
 import { useState } from 'react';
-import {Dialog,Box,TextField,Typography,Button,styled} from '@mui/material'
+import {Dialog,Box,TextField,Typography,Button,styled} from '@mui/material';
+
+import { authenticateSignup } from '../service/api';
 
 const Component=styled(Box)`
     height:70vh;
@@ -104,11 +106,13 @@ const toggleSignup=()=>{
 
 const onInputChange=(e)=>{
     setSignup({ ...signup,[e.target.name]:e.target.value})
-    console.log(signup)
+   
 
 }
 
-const signupUser=()=>{
+const signupUser=async()=>{
+  let response= await  authenticateSignup(signup)
+
 
 }
     return(
