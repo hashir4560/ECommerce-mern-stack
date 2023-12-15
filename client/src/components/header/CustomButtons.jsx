@@ -7,6 +7,7 @@ import { DataContext } from "../../context /DataProvider";
 
 //components
 import LoginDialog from "../login/LoginDialog";
+import Profile from "./Profile";
 
 const Wrapper=styled(Box)`
     display:flex;
@@ -46,7 +47,7 @@ const CustomButtons=()=>{
     return (
         <Wrapper>
             {
-                account? <Typography>{account}</Typography>:
+                account? <Profile account={account}/>:
                 <LoginButton variant="contained" onClick={()=> openDialog()}>Login</LoginButton>
             }
 
