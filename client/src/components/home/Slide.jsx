@@ -6,6 +6,7 @@ import Countdown from 'react-countdown';
 
 import { Box, Typography,Button,Divider,styled } from "@mui/material";
 
+
 const responsive = {
 
 
@@ -55,12 +56,21 @@ const ViewAllButton=styled(Button)`
   border-radius: 2px;
   font-size: 13px;
   font-weight: 600;
-  
+`;
+
+
+const Image=styled('img')({
+    width:"auto",
+    height:150,
+});
+
+const Text=styled(Typography)`
+    font-size:14px;
 
 `
 
 
-const Slide=({products})=>{
+const Slide=({products,title,timer})=>{
 
     const timerURL = 'https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/timer_a73398.svg';
 
@@ -72,11 +82,16 @@ const Slide=({products})=>{
     return (
         <Component>
             <Deal>
-                <DealText>Deals Of The Day </DealText>
-                <Timer>
+                <DealText>{title} </DealText>
+                {
+                    timer && 
+                    <Timer>
                     <img src={timerURL} alt="timer" style={{width:"24px"}}/>
                     <Countdown date={Date.now() + 5.04e+7} renderer={renderer}/>
                 </Timer>
+                }
+
+                
                 <ViewAllButton variant="contained">View All</ViewAllButton>
             </Deal>
             <Divider/>
@@ -95,7 +110,12 @@ const Slide=({products})=>{
             >
                 {
                     products.map(product=>(
-                        <img src={product.url} alt="product"/>
+                        <Box textAlign="center" style={{padding: '25px 15px'}}>
+                        <Image src={product.url} alt="product"/>
+                        <Text style={{fontWeight:600,color: '#212121'}}>{product.title.shortTitle}</Text>
+                        <Text style={{color:'green'}}>{product.discount}</Text>
+                        <Text style={{color:'#212121',opacity:'0.6'}}>{product.tagline}</Text>
+                        </Box>
                     ))
                 }
                 
