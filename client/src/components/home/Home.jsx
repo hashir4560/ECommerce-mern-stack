@@ -3,6 +3,7 @@ import { useEffect } from "react";
 //components
 import NavBar from "./NavBar";
 import Banner  from "./Banner";
+import Slide from './Slide';
 
 import { Box,styled } from "@mui/material";
 
@@ -31,9 +32,10 @@ const Home=()=>{
     return (
         <>
         <NavBar/>
-        
+      
         <Component>
             <Banner/>
+            <Slide products={products}/>
         </Component>
         </>
         
