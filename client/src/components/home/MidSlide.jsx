@@ -19,11 +19,14 @@ const RightComponent=styled(Box)`
 `
 
 
-const MidSlide=({products,title,timer})=>{
 
-    const adURL = 'https://rukminim1.flixcart.com/flap/464/708/image/633789f7def60050.jpg?q=70';
+
+const MidSlide=({products,title,timer})=>{
+ const adURL = 'https://rukminim1.flixcart.com/flap/464/708/image/633789f7def60050.jpg?q=70';
 
     return (
+
+        
         <Component>
             <LeftComponent>
                 <Slide
