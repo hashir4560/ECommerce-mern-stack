@@ -14,7 +14,6 @@ const InputSearchBase=styled(InputBase)`
     padding-left:20px;
     width:100%;
     font-size:unset;
-    
 `
 
 const SearchIconWrapper=styled(Box)`

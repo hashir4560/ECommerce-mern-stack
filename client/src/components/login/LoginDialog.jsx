@@ -21,7 +21,6 @@ const Image=styled(Box)`
     & > p , & > h5{
         color:#FFFFFF;
         font-weight:600;
-
     }
 
 `;
@@ -185,9 +184,6 @@ const loginUser=async()=>{
                     <TextField variant='standard' onChange={(e)=> onInputChange(e)} name='password'  label=" Password"/>
                     <TextField variant='standard' onChange={(e)=> onInputChange(e)} name='phone'  label=" Phone"/>
                     <LoginButton onClick={()=>signupUser()}>Continue</LoginButton>
-             
-                    
-        
                     <RequestOTP>Request OTP</RequestOTP>
                     <CreateAccount>New to Flipkat? Create  an account </CreateAccount>
             
