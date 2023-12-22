@@ -4,6 +4,7 @@ import { imageURL } from "../../constants/data"
 
 const Wrapper=styled(Grid)`
     margin-top:20px;
+    kustify-content: space-between;
 `
 
 const MidSection=()=>{

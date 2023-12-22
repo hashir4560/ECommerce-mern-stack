@@ -29,7 +29,6 @@ const PlusImage=styled('img')({
 
 const CustomButtonWrapper=styled(Box)`
     margin: 0 5% 0 auto;
-
 `
 
 

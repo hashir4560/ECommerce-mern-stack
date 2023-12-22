@@ -26,7 +26,7 @@ const MidSlide=({products,title,timer})=>{
 
     return (
 
-        
+
         <Component>
             <LeftComponent>
                 <Slide
