@@ -21,11 +21,6 @@ const StyledButton=styled(Button)`
     border-radius:2px;
 `
 
-
-
-
-
-
  const ActionItem=({product})=>{
     return(
        <LeftContainer>
