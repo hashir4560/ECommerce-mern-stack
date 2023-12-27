@@ -14,7 +14,6 @@ const StyledBadge=styled(Badge)`
     margin-right:10px;
     color: #00CC00;
     font-size:15px;
-
 `
 
 const ProductDetail=({product})=>{
@@ -58,7 +57,7 @@ const ProductDetail=({product})=>{
                     </TableRow>
                 </TableBody>
             </Table>
-        
+    
         </>
     )
 }
