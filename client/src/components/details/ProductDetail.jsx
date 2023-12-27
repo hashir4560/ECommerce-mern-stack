@@ -1,6 +1,21 @@
 
-import { Box,Typography } from "@mui/material";
+import { Box,Typography,styled } from "@mui/material";
+import {LocalOffer as Badge} from '@mui/icons-material';
 
+const SmallText=styled(Box)`
+    font-size:14px;
+    vertical-align:baseline;
+    & > p {
+        font-size:14px;
+        margin-top:10px;
+    }
+`
+const StyledBadge=styled(Badge)`
+    margin-right:10px;
+    color: #00CC00;
+    font-size:15px;
+
+`
 
 const ProductDetail=({product})=>{
     const fassured = 'https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/fa_62673a.png'
@@ -16,11 +31,14 @@ const ProductDetail=({product})=>{
             <Box component='span' style={{color:"#388E3C"}}>{product.price.discount}Off</Box>                
             </Typography>
             <Typography>Available Offers</Typography>
-            <Box>
-                <Typography>Get extra 20% off upto on Rs50 on 1 item(s) T&C </Typography>
-                <Typography>Get extra 13% off(price inclusive of discount) T&C  </Typography>
-                <Typography></Typography>
-            </Box>
+            <SmallText>
+                <Typography><StyledBadge/>Get extra 20% off upto on Rs50 on 1 item(s) T&C </Typography>
+                <Typography><StyledBadge/>Get extra 13% off(price inclusive of discount) T&C  </Typography>
+                <Typography><StyledBadge/>Sign up for Flipkart pay Later and get Flipkart Gift Worth Rs 500 Know more </Typography>
+                <Typography> <StyledBadge/>Buy 2 items  save 5%;Buy 3 or more save 10% T&C </Typography>
+                <Typography> <StyledBadge/>5% Cashback on Flipkart Axis Bank Card</Typography>
+                <Typography><StyledBadge/>No Cost EMI on Bajaj Finserv EMI card on cart value above Rs.2999 T&C</Typography>
+            </SmallText>
         
         </>
     )
