@@ -1,5 +1,5 @@
 
-import { Box,Typography,styled } from "@mui/material";
+import { Table,Box,TableBody,TableCell,TableRow,Typography,styled } from "@mui/material";
 import {LocalOffer as Badge} from '@mui/icons-material';
 
 const SmallText=styled(Box)`
@@ -19,6 +19,7 @@ const StyledBadge=styled(Badge)`
 
 const ProductDetail=({product})=>{
     const fassured = 'https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/fa_62673a.png'
+    const date = new Date(new Date().getTime()+(5*24*60*60*1000));
     return (
         <>
         <Typography>{product.title.longTitle}</Typography>
@@ -39,6 +40,24 @@ const ProductDetail=({product})=>{
                 <Typography> <StyledBadge/>5% Cashback on Flipkart Axis Bank Card</Typography>
                 <Typography><StyledBadge/>No Cost EMI on Bajaj Finserv EMI card on cart value above Rs.2999 T&C</Typography>
             </SmallText>
+            <Table>
+                <TableBody>
+                    <TableRow>
+                        <TableCell style={{color: '#878787'}}> Delivery</TableCell>
+                        <TableCell style={{fontWeight: 600}}>Delivery by {date.toDateString()} | Rs100</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell style={{color: '#878787'}}>Warranty</TableCell>
+                        <TableCell >No Warranty</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell style={{color: '#878787'}}>Seller</TableCell>
+                        <TableCell style={{color:"#3874f0"}}>
+                            <Box  component='span'>SuperComNet</Box>
+                        </TableCell>
+                    </TableRow>
+                </TableBody>
+            </Table>
         
         </>
     )
