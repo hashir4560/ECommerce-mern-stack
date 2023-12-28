@@ -41,8 +41,10 @@ const LoginButton=styled(Button)`
     box-shadow:none;
     font-weight:600;
     height:32px;
+    
 
 `
+
 
 const CustomButtons=()=>{
 
