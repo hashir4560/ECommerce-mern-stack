@@ -10,6 +10,16 @@ const SmallText=styled(Box)`
         margin-top:10px;
     }
 `
+const ColumnText = styled(TableRow)`
+    font-size: 14px;
+    vertical-align: baseline;
+    & > td {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+`
+
+
 const StyledBadge=styled(Badge)`
     margin-right:10px;
     color: #00CC00;
@@ -18,6 +28,7 @@ const StyledBadge=styled(Badge)`
 
 const ProductDetail=({product})=>{
     const fassured = 'https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/fa_62673a.png'
+    const adURL = 'https://rukminim1.flixcart.com/lockin/774/185/images/CCO__PP_2019-07-14.png?q=50';
     const date = new Date(new Date().getTime()+(5*24*60*60*1000));
     return (
         <>
@@ -26,7 +37,7 @@ const ProductDetail=({product})=>{
          <Box component='span'><img src={fassured} alt="" style={{width:77,marginLeft:20}}/></Box>
         </Typography>
         <Typography>
-            <Box component='span' style={{fontSize:28}}>Rs{product.price.cost}</Box>&nbsp;&nbsp;&nbsp;
+            <Box component='span' style={{fontSize:28}}>Rs {product.price.cost}</Box>&nbsp;&nbsp;&nbsp;
             <Box component='span' style={{color:"#878787"}}><strike>Rs{product.price.mrp}</strike></Box>&nbsp;&nbsp;&nbsp;
             <Box component='span' style={{color:"#388E3C"}}>{product.price.discount}Off</Box>                
             </Typography>
@@ -51,10 +62,24 @@ const ProductDetail=({product})=>{
                     </TableRow>
                     <TableRow>
                         <TableCell style={{color: '#878787'}}>Seller</TableCell>
-                        <TableCell style={{color:"#3874f0"}}>
-                            <Box  component='span'>SuperComNet</Box>
+                        <TableCell style={{color:"#2874f0"}}>
+                         <span style={{color:'#2874f0'}} >SuperComNet</span>
+                         <Typography>GST invoice available</Typography>
+                         <Typography>View more sellers starting from Rs {product.price.cost}</Typography>
+                
                         </TableCell>
                     </TableRow>
+                    <TableRow>
+                        <TableCell colSpan={2}>
+                            <img src={adURL} style={{width:390}} alt="flipkartpoints"/>
+
+
+                        </TableCell>
+                    </TableRow>
+                    <ColumnText>
+                         <TableCell style={{color:"#878787"}}>Description</TableCell>
+                         <TableCell>{product.description}</TableCell>
+                    </ColumnText>
                 </TableBody>
             </Table>
     
