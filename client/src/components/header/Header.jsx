@@ -33,7 +33,7 @@ const PlusImage = styled('img')({
 })
 
 const MenuButton = styled(IconButton)(({ theme }) => ({
-    display: 'none',
+    display: '',
     [theme.breakpoints.down('sm')]: {
         display: 'block'
     }
