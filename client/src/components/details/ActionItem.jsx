@@ -1,6 +1,6 @@
 
 import {Box,Button,styled} from '@mui/material'
-
+import { useState } from 'react';
 import {ShoppingCart as Cart,FlashOn as Flash}from '@mui/icons-material';
 
 import { useNavigate } from 'react-router-dom';
@@ -41,15 +41,18 @@ const StyledButton=styled(Button)(({theme})=>({
 
  const ActionItem=({product})=>{
 
-    dispatch()
+  
     const navigate=useNavigate();
     const dispatch=useDispatch();
 
-    const {id}=product
+    const [quantity,setQuantity]=useState(1);
 
+
+    const {id}=product
     
     const addItemToCart=()=>{
-        dispatch(addItemToCart(id,))
+
+        dispatch(addToCart(id,quantity))
         navigate('/cart')
 
     }
