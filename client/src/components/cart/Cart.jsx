@@ -2,6 +2,9 @@
 import { Grid, Typography ,Box} from "@mui/material"
 import { useSelector } from "react-redux";
 
+//components
+import CartItem from "./CartItem";
+
 
 const Cart=()=>{
 
@@ -15,6 +18,11 @@ const Cart=()=>{
             <Box>
                 <Typography>My Cart({cartItems.length})</Typography>
             </Box>
+            {
+                cartItems.map(item=>(
+                    <CartItem/>
+                ))
+            }
             
 
             </Grid>
