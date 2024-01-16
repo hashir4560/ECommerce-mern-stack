@@ -10,6 +10,7 @@ const Component=styled(Box)(({theme})=>({
     justifyContent:'space-between',
     // overflow:'overlay', For ScrollBar
     overflow:'hidden',
+   
     [theme.breakpoints.down('lg')]:{
         margin:0
     }
@@ -30,12 +31,16 @@ const Text=styled(Typography)`
 
 const NavBar=()=>{
     return (
+        <Box style={{background:'#fff'}}>
+
+    
         <Component>{navData.map(data=>(
             <Container>
                 <img src={data.url} alt="nav" style={{width:64}}/>
                 <Text>{data.text}</Text>
                 </Container>
         ))}</Component>
+            </Box>
     )
 
 }
