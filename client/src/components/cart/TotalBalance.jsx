@@ -75,7 +75,7 @@ const TotalBalance=({cartItems})=>{
             
             </Typography>
             <Typography variant="h6">Total Amount
-                <Price  component='span'>Rs{price-discount+100}</Price>
+                <Price  component='span'>Rs {price-discount+100}</Price>
             </Typography>
             <Discount> You will save Rs{discount-100}on this Order</Discount>
         </Container>
@@ -83,4 +83,4 @@ const TotalBalance=({cartItems})=>{
     )
 }
 
-export default TotalBalance
+export default TotalBalance;
