@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 //components
 import CartItem from "./CartItem";
 import TotalBalance from "./TotalBalance";
+import EmptyCart from "./EmptyCart";
 
 
 const Container=styled(Grid)`
@@ -62,7 +63,7 @@ const Cart=()=>{
             </Grid>
 
           </Container>
-          : <div> Empty</div>
+          : <EmptyCart/>
       }
 
        
