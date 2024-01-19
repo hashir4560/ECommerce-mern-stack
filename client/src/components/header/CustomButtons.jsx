@@ -1,7 +1,9 @@
 import { useState,useContext } from "react";
 import { Link } from "react-router-dom";
 
-import { Box,Button, Typography,styled } from "@mui/material"
+
+
+import {  Box,Button, Typography,styled } from "@mui/material"
 import {ShoppingCart} from '@mui/icons-material';
 
 import { DataContext } from "../../context /DataProvider";
@@ -12,8 +14,13 @@ import Profile from "./Profile";
 
 const Container = styled(Link)(({ theme }) => ({
     display: 'flex',
+    textDecoration:'none',
+    color:'inherit',
     [theme.breakpoints.down('sm')]: {
-        display: 'block'
+        display: 'block',
+        
+
+
     }
 }));
 
@@ -79,8 +86,10 @@ const CustomButtons=()=>{
             <Typography style={{marginTop:3,width:135}}>Become a seller</Typography>
             <Typography style={{marginTop:3}}>More</Typography>
 
-            <Container>
+            <Container to ="/cart">
+         
                 <ShoppingCart/>
+            
                 <Typography>Cart</Typography>
             </Container>
             <LoginDialog open={open} setOpen={setOpen}/>
